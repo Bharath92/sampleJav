@@ -5,6 +5,9 @@ language: java
 jdk:
   - openjdk7
 
+env:
+  - secure: furP3H+H/SfaBBeuZ5eeET8sdXYB0qu+7Pqf2noCJdLvzVoPaTZQ7ZIudM5Y1+LyjpH4x1t0ZLugqFo714Kewz25H8Tho3QMlGOBtcfPeZzwUHfLyeryM9mVaMppA1hHMnZmaZZr5iQiq2HU6KZMw8jA2Lm8yJMc5WqvNLFeOB+LUVGR6gm0nfKNES3DGYV2IQzQnpiAwOO1GdQbgQHY9+OHRoIjmkcisOSYInUEJBAH4ys5+l878Erb+2yHZusoaMUnaKJgDVUHIkWSET39VXM+DofuEKhs+cU1a8PuqY5xWcUSMdDwGjqFoj8cOx/137DXSzhVFWxdOC2iPHf7Rg==
+
 matrix:
   allow_failures:
     - jdk: oraclejdk7 
@@ -13,6 +16,7 @@ build:
   ci:
     - aws --version
     #- docker pull bharath92/gitissues
+    - docker pull $test
     - printenv
     - java -version  
     - echo $custom
@@ -21,7 +25,11 @@ build:
     - echo "versionName=$IMAGE_TAG.$BUILD_NUMBER" > $JOB_STATE/dv-image.env
     - echo lol
     
-#integrations:                               
+integrations:                               
 #  hub:
 #    - integrationName: docker    #replace with your integration name   
 #      type: docker
+  hub:
+    - integrationName: aws    #replace with your integration name
+      region: us-east-1                   #replace with your AWS region
+      type: ecr
