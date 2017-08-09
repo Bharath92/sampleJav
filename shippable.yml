@@ -29,9 +29,9 @@ integrations:
   hub:
 #    - integrationName: docker    #replace with your integration name   
 #      type: docker
-    - integrationName: aws    #replace with your integration name
-      region: us-east-1                   #replace with your AWS region
-      type: ecr
+#    - integrationName: aws    #replace with your integration name
+#      region: us-east-1                   #replace with your AWS region
+#      type: ecr
     - integrationName: pdr
       type: "private docker registry"
   
