@@ -5,8 +5,8 @@ language: java
 #jdk:
 #  - openjdk7
 
-env:
-  - secure: CpKhFRuGgXpri5/qadDu3d+417L+Dy7sfsuZtJQQXYWvpn/3gof53ry05CgDxDzE11IShXAmfd2a4RWdr/aHmxtykbaDZLcHq3GGoKBgg9kaTGEK92Ahd/PUf2QjnaRb7f4VEfBuyoUaso751hzGNiYEJQUKBp8T9nEPo8MofEnHI1Lm39TcDrTbLcf3TKESU2IHoAig17Qi/wycVaRvcg34Vakwwgfa9XZz1H1AsY+2+66/J14oncCzIPLqWjBXk36Sbgz90k5OgOVlCRjVHoOY05b8yEpbxugqzdaxTpZtgWtEejnBhhFwHUsih6+fHamcFu9j37Ret7HcRf/0ow==
+#env:
+#  - secure: CpKhFRuGgXpri5/qadDu3d+417L+Dy7sfsuZtJQQXYWvpn/3gof53ry05CgDxDzE11IShXAmfd2a4RWdr/aHmxtykbaDZLcHq3GGoKBgg9kaTGEK92Ahd/PUf2QjnaRb7f4VEfBuyoUaso751hzGNiYEJQUKBp8T9nEPo8MofEnHI1Lm39TcDrTbLcf3TKESU2IHoAig17Qi/wycVaRvcg34Vakwwgfa9XZz1H1AsY+2+66/J14oncCzIPLqWjBXk36Sbgz90k5OgOVlCRjVHoOY05b8yEpbxugqzdaxTpZtgWtEejnBhhFwHUsih6+fHamcFu9j37Ret7HcRf/0ow==
 
 matrix:
   allow_failures:
@@ -16,7 +16,7 @@ build:
   ci:
     - aws --version
     #- docker pull bharath92/gitissues
-    - docker pull $test
+    - docker pull 174.138.49.87/alpine
     - printenv
     - java -version  
     - echo $custom
@@ -26,10 +26,12 @@ build:
     - echo lol
     
 integrations:                               
-#  hub:
+  hub:
 #    - integrationName: docker    #replace with your integration name   
 #      type: docker
-  hub:
     - integrationName: aws    #replace with your integration name
       region: us-east-1                   #replace with your AWS region
       type: ecr
+    - integrationName: pdr
+      type: "private docker registry"
+  
