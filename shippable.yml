@@ -15,23 +15,8 @@ matrix:
 build:
   ci:
     - aws --version
-    #- docker pull bharath92/gitissues
-    - docker pull 174.138.49.87/alpine
-    - printenv
-    - java -version  
-    - echo $custom
+    - gradle --version
     - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
     - for i in {1..5}; do echo "$i"; done
     - echo "versionName=$IMAGE_TAG.$BUILD_NUMBER" > $JOB_STATE/dv-image.env
     - echo lol
-    
-integrations:                               
-  hub:
-#    - integrationName: docker    #replace with your integration name   
-#      type: docker
-#    - integrationName: aws    #replace with your integration name
-#      region: us-east-1                   #replace with your AWS region
-#      type: ecr
-    - integrationName: pdr
-      type: "private docker registry"
-  
