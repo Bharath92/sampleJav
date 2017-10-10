@@ -9,7 +9,7 @@ build:
     - aws --version
     - az --version
     - terraform --version
-    - kubectl version
+    - kubectl version || true
     - gcloud --version
     - eb --version
     - packer --version
