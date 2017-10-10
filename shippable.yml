@@ -13,4 +13,4 @@ build:
     - gcloud --version
     - eb --version
     - packer --version
-    - true
+    - echo lol
