@@ -16,6 +16,6 @@ build:
     - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/mktg
 integrations:                               
   hub:
-    - integrationName: aws-int    #replace with your integration name   
+    - integrationName: aws-int    #dummy commit
       type: ecr
       region: us-east-1
