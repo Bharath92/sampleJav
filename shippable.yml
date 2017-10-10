@@ -1,22 +1,15 @@
-# Language setting
-language: java
-
-# Version number
-#jdk:
-#  - openjdk7
-
-#env:
-#  - secure: CpKhFRuGgXpri5/qadDu3d+417L+Dy7sfsuZtJQQXYWvpn/3gof53ry05CgDxDzE11IShXAmfd2a4RWdr/aHmxtykbaDZLcHq3GGoKBgg9kaTGEK92Ahd/PUf2QjnaRb7f4VEfBuyoUaso751hzGNiYEJQUKBp8T9nEPo8MofEnHI1Lm39TcDrTbLcf3TKESU2IHoAig17Qi/wycVaRvcg34Vakwwgfa9XZz1H1AsY+2+66/J14oncCzIPLqWjBXk36Sbgz90k5OgOVlCRjVHoOY05b8yEpbxugqzdaxTpZtgWtEejnBhhFwHUsih6+fHamcFu9j37Ret7HcRf/0ow==
-
-matrix:
-  allow_failures:
-    - jdk: oraclejdk7 
 
 build:
+  pre_ci_boot:
+    image_name: drydock/u16
+    image_tag: master
+    pull: true
+
   ci:
     - aws --version
-    - gradle --version
-    - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
-    - for i in {1..5}; do echo "$i"; done
-    - echo "versionName=$IMAGE_TAG.$BUILD_NUMBER" > $JOB_STATE/dv-image.env
-    - echo lol
+    - az --version
+    - terraform --version
+    - kubectl version
+    - gcloud --version
+    - eb --version
+    - packer --version
