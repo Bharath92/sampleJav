@@ -13,7 +13,7 @@ build:
     - gcloud --version
     - eb --version
     - packer --version
-    - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/mktg
+    - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
 integrations:                               
   hub:
     - integrationName: aws-int    #dummy commit
