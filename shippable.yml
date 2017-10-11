@@ -13,9 +13,14 @@ build:
     - gcloud --version
     - eb --version
     - packer --version
+    - docker pull alpine
+    - docker images
   #  - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
 integrations:                               
   #hub:
   #  - integrationName: aws-int    #dummy commit
   #    type: ecr
   #    region: us-east-1
+  hub:
+    - integrationName: gcr    #dummy commit
+      type: gcr
