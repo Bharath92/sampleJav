@@ -15,8 +15,8 @@ build:
     - packer --version
     - docker pull alpine
     - docker images
-    - docker tag alpine gcr.io/Google-cloud-POC/alpine
-    - gcloud docker -- push gcr.io/Google-cloud-POC/alpine
+    - docker tag alpine gcr.io/google-cloud-poc/alpine
+    - gcloud docker -- push gcr.io/google-cloud-poc/alpine
   #  - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
 integrations:                               
   #hub:
