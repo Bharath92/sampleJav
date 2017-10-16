@@ -15,7 +15,7 @@ matrix:
 build:
   pre_ci_boot:
     image_name: drydock/u14
-    image_tag: latest
+    image_tag: master
     pull: true
   ci:
     - aws --version
