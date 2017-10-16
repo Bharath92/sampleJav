@@ -14,7 +14,7 @@ build:
     - eb --version
     - packer --version
     - docker pull alpine
-    - gcloud docker -- push gcr.io/sunlit-pixel-182606/alpine
+    - gcloud docker -- pull gcr.io/sunlit-pixel-182606/alpine
     - docker images
   #  - docker tag alpine gcr.io/sunlit-pixel-182606/alpine
   #  - gcloud docker -- push gcr.io/sunlit-pixel-182606/alpine
