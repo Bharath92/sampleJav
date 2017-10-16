@@ -13,10 +13,17 @@ matrix:
     - jdk: oraclejdk7 
 
 build:
+  pre_ci_boot:
+    image_name: drydock/u14
+    image_tag: latest
+    pull: true
   ci:
     - aws --version
-    - gradle --version
-    - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
-    - for i in {1..5}; do echo "$i"; done
-    - echo "versionName=$IMAGE_TAG.$BUILD_NUMBER" > $JOB_STATE/dv-image.env
-    - echo lol
+    - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
+
+
+integrations:
+  hub:
+    - integrationName: aws-int  #replace with your integration name
+      type: ecr
+      region: us-east-1                 #replace with your AWS region
