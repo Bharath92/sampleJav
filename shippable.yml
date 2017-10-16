@@ -1,7 +1,7 @@
 
 build:
   pre_ci_boot:
-    image_name: drydock/u16
+    image_name: drydock/u14
     image_tag: master
     pull: true
 
@@ -14,6 +14,7 @@ build:
     - eb --version
     - packer --version
     - docker pull alpine
+    - gcloud docker -- push gcr.io/sunlit-pixel-182606/alpine
     - docker images
   #  - docker tag alpine gcr.io/sunlit-pixel-182606/alpine
   #  - gcloud docker -- push gcr.io/sunlit-pixel-182606/alpine
@@ -23,6 +24,6 @@ integrations:
   #  - integrationName: aws-int    #dummy commit
   #    type: ecr
   #    region: us-east-1
-  #hub:
-  #  - integrationName: gcr    #dummy commit
-  #    type: gcr
+  hub:
+    - integrationName: gcr    #dummy commit
+      type: gcr
