@@ -7,7 +7,6 @@ build:
 
   ci:
     - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
-    - ruby --version
     - yarn --version
   #  - docker tag alpine gcr.io/sunlit-pixel-182606/alpine
   #  - gcloud docker -- push gcr.io/sunlit-pixel-182606/alpine
