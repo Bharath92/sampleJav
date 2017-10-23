@@ -17,7 +17,6 @@ build:
   ci:
     - aws --version
     - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
-    - ruby --version
     - yarn --version
 
 
