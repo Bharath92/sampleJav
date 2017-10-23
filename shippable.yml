@@ -1,7 +1,7 @@
 
 build:
   pre_ci_boot:
-    image_name: drydock/u16golall
+    image_name: drydock/u14nodall
     image_tag: master
     pull: true
 
