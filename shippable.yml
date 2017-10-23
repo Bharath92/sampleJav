@@ -7,19 +7,18 @@ language: java
 
 #env:
 #  - secure: CpKhFRuGgXpri5/qadDu3d+417L+Dy7sfsuZtJQQXYWvpn/3gof53ry05CgDxDzE11IShXAmfd2a4RWdr/aHmxtykbaDZLcHq3GGoKBgg9kaTGEK92Ahd/PUf2QjnaRb7f4VEfBuyoUaso751hzGNiYEJQUKBp8T9nEPo8MofEnHI1Lm39TcDrTbLcf3TKESU2IHoAig17Qi/wycVaRvcg34Vakwwgfa9XZz1H1AsY+2+66/J14oncCzIPLqWjBXk36Sbgz90k5OgOVlCRjVHoOY05b8yEpbxugqzdaxTpZtgWtEejnBhhFwHUsih6+fHamcFu9j37Ret7HcRf/0ow==
-
-matrix:
-  allow_failures:
-    - jdk: oraclejdk7 
+ 
 
 build:
   pre_ci_boot:
-    image_name: drydock/u14
-    image_tag: master
+    image_name: bharath92/u14all
+    image_tag: latest
     pull: true
   ci:
     - aws --version
     - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
+    - ruby --version
+    - yarn --version
 
 
 integrations:
