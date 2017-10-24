@@ -15,5 +15,5 @@ build:
     image_tag: master
     pull: true
   ci:
-    - cd /opt/android-plugins && ls
-    - cd /opt && ls
+    - printenv
+    - /opt/android-sdk/tools/bin/sdkmanager
