@@ -15,5 +15,5 @@ build:
     image_tag: master
     pull: true
   ci:
-    - sdkmanager
     - cd /opt/android-plugins && ls
+    - cd /opt && ls
