@@ -11,7 +11,7 @@ language: java
 
 build:
   pre_ci_boot:
-    image_name: drydock/u14javall
+    image_name: drydock/u16javall
     image_tag: latest
     pull: true
   ci:
