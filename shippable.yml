@@ -11,17 +11,8 @@ language: java
 
 build:
   pre_ci_boot:
-    image_name: bharath92/u14all
+    image_name: drydock/u14javall
     image_tag: latest
     pull: true
   ci:
-    - aws --version
-    - docker pull 374168611083.dkr.ecr.us-east-1.amazonaws.com/api
-    - yarn --version
-
-
-integrations:
-  hub:
-    - integrationName: aws-int  #replace with your integration name
-      type: ecr
-      region: us-east-1                 #replace with your AWS region
+    - sdkmanager
