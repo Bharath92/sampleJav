@@ -17,5 +17,6 @@ build:
   ci:
     - echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> $HOME/.bashrc
     - echo 'export PATH=$PATH:/usr/lib/jvm/java-8-oracle/jre/bin' >> $HOME/.bashrc
+    - PATH=$PATH:/usr/lib/jvm/java-8-oracle/jre/bin
     - printenv
     - /opt/android-sdk/tools/bin/sdkmanager
