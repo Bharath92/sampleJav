@@ -3,15 +3,16 @@ language: java
 
 # Version number
 jdk:
-  - openjdk6
   - openjdk7
-  - oraclejdk7
+  - openjdk8
+  - openjdk9
   - oraclejdk8
+  - oraclejdk9
 
 build:
   pre_ci_boot:
-    image_name: drydock/u14jav
-    image_tag: prod
+    image_name: drydock/u14javall
+    image_tag: master
     pull: true
 
   ci:
