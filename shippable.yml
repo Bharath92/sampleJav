@@ -21,6 +21,5 @@ build:
     - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
     - export ANDROID_HOME=/opt/android-sdk
     - export ANDROID_SDK=/opt/android-sdk/tools/bin
-    - java --version
     - printenv
     - /opt/android-sdk/tools/bin/sdkmanager
