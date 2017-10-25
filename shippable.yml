@@ -10,6 +10,10 @@ jdk:
  
 
 build:
+  pre_ci_boot:
+    image_name: bharath92/test-bashrc
+    image_tag: latest
+    pull: true
   ci:
     - cat ~/.bashrc 
     - echo $BASH_ENV
