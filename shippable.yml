@@ -14,13 +14,10 @@ jdk:
  
 
 build:
-  pre_ci:
-    - docker pull bharath92/u16javall:android
-    - docker tag bharath92/u16javall:android drydock/u16javall:master
   pre_ci_boot:
-    image_name: drydock/u16javall
-    image_tag: master
-    pull: false
+    image_name: bharath92/u16javall
+    image_tag: android
+    pull: true
   ci:
     - gradle --version
     - sdkmanager --list
