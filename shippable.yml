@@ -11,6 +11,5 @@ jdk:
 
 build:
   ci:
-    - export ANDROID_HOME=/opt/android-sdk
-    - export ANDROID_SDK=/opt/android-sdk/tools/bin
-    - /opt/android-sdk/tools/bin/sdkmanager
+    - cat ~/.bashrc
+    - printenv
