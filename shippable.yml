@@ -14,4 +14,5 @@ build:
     - cat ~/.bashrc
     - printenv
     - source ~/.bashrc
+    - echo $PS1
     - echo $ANDROID_HOME
