@@ -11,7 +11,7 @@ jdk:
 
 build:
   ci:
-    - cat ~/.bashrc
+    - cat ~/.bashrc 
     - echo $BASH_ENV
     - printenv
     - PS1='\s-\v\$ '
