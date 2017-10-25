@@ -13,4 +13,5 @@ build:
   ci:
     - cat ~/.bashrc
     - printenv
+    - source ~/.bashrc
     - echo $ANDROID_HOME
