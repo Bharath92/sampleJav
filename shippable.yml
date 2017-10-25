@@ -3,6 +3,10 @@ language: java
 
 # Version number
 jdk:
+  - openjdk7
+  - openjdk8
+  - openjdk9
+  - oraclejdk8
   - oraclejdk9
 
 #env:
@@ -10,15 +14,13 @@ jdk:
  
 
 build:
+  pre_ci:
+    - docker pull bharath92/u16javall:android
+    - docker tag bharath92/u16javall:android drydock/u16javall:master
   pre_ci_boot:
-    image_name: bharath92/test-bashrc
-    image_tag: latest
-    pull: true
+    image_name: drydock/u16javall
+    image_tag: master
+    pull: false
   ci:
-    - cat ~/.bashrc 
-    - echo $BASH_ENV
-    - printenv 
-    - PS1='\s-\v\$ '
-    - source ~/.bashrc
-    - echo $PS1
-    - echo $ANDROID_HOME
+    - gradle --version
+    - sdkmanager --list
