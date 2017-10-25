@@ -15,6 +15,7 @@ build:
     image_tag: master
     pull: true
   ci:
+    - yarn --version
     - java -version
     - gradle --version
     - sdkmanager --list
