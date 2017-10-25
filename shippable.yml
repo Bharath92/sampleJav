@@ -13,6 +13,7 @@ build:
   ci:
     - cat ~/.bashrc
     - printenv
+    - PS1='\s-\v\$ '
     - source ~/.bashrc
     - echo $PS1
     - echo $ANDROID_HOME
