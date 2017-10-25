@@ -19,5 +19,6 @@ build:
     image_tag: android
     pull: true
   ci:
+    - java -version
     - gradle --version
     - sdkmanager --list
