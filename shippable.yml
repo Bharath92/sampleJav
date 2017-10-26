@@ -4,11 +4,14 @@ env:
   global:
     - drydock_family=u14
   matrix:
-    - drydock_img=javall
+    - drydock_img=jav
+    - drydock_img=rub
+    - drydock_img=gol
+    - drydock_img=cpp
 
 build:
   pre_ci_boot:
-    image_name: drydock/$drydock_family""$drydock_img
+    image_name: drydock/$drydock_family""$drydock_img"all"
     image_tag: master
     pull: true
   ci:
@@ -21,4 +24,4 @@ integrations:
   hub:
     - integrationName: aws-int  #replace with your integration name
       type: ecr
-      region: us-east-1  
+      region: us-east-1
