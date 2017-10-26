@@ -1,13 +1,14 @@
-# Language setting
 language: java
 
 env:
-  - drydock_image: javall
   global:
-  - drydock_family: u14
+    - drydock_family=u14
+  matrix:
+    - drydock_img=javall
+
 build:
   pre_ci_boot:
-    image_name: drydock/$drydock_famiy""$drydock_image
+    image_name: drydock/$drydock_family""$drydock_img
     image_tag: master
     pull: true
   ci:
@@ -20,4 +21,4 @@ integrations:
   hub:
     - integrationName: aws-int  #replace with your integration name
       type: ecr
-      region: us-east-1                 #replace with your AWS region
+      region: us-east-1  
