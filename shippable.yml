@@ -1,18 +1,39 @@
 language: none
 
 env:
-  global:
-    - drydock_family=u14
   matrix:
     - drydock_img=jav
-      dry=1
+      drydock_family=u14
     - drydock_img=rub
+      drydock_family=u14
     - drydock_img=gol
+      drydock_family=u14
     - drydock_img=cpp
+      drydock_family=u14
     - drydock_img=nod
+      drydock_family=u14
     - drydock_img=php
+      drydock_family=u14
     - drydock_img=pyt
+      drydock_family=u14
     - drydock_img=clo
+      drydock_family=u14
+    - drydock_img=jav
+      drydock_family=u16
+    - drydock_img=rub
+      drydock_family=u16
+    - drydock_img=gol
+      drydock_family=u16
+    - drydock_img=cpp
+      drydock_family=u16
+    - drydock_img=nod
+      drydock_family=u16
+    - drydock_img=php
+      drydock_family=u16
+    - drydock_img=pyt
+      drydock_family=u16
+    - drydock_img=clo
+      drydock_family=u16
 build:
   pre_ci_boot:
     image_name: drydock/$drydock_family""$drydock_img"all"
