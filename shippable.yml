@@ -4,8 +4,7 @@ language: java
 env:
   - drydock_image: javall
   global:
-    - drydock_family: u14
-  
+  - drydock_family: u14
 build:
   pre_ci_boot:
     image_name: drydock/$drydock_famiy""$drydock_image
