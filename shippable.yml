@@ -15,4 +15,4 @@ build:
     image_tag: v5.10.4
     pull: true
   ci:
-    - java --version
+    - java -version
