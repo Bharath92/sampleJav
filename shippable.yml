@@ -16,3 +16,5 @@ build:
     pull: true
   ci:
     - java -version
+    - az --version
+    - sleep 10
