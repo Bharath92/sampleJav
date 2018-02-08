@@ -4,4 +4,4 @@ language: java
 
 build:
   ci:
-    - java --vesion 
+    - java --version 
