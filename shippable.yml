@@ -7,4 +7,4 @@ language: openjdk9
 
 build:
   ci:
-    - java --vesion
+    - java --vesion 
