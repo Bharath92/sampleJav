@@ -1,7 +1,11 @@
 # Language setting
 language: java
  
-
 build:
   ci:
     - java -version
+
+integrations:
+  hub:
+    - integrationName: azure
+      type: private docker registry
